@@ -172,6 +172,8 @@ class Interaction:
             self.user_car.vel.add(Vector((-0.05, 0)))
         elif self.keyboard.right:
             self.user_car.vel.add(Vector((0.05, 0)))
+        else:
+            self.user_car.vel=Vector((1,0))#if nothing is done then keep moving forward
 
 #instances of all types, without brackets it points to a class but doesnt make an instance
 object_User_Car= User_Car(Vector((75,random.randrange(150,550))))
